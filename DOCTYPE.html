@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Quest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            text-align: center;
+            color: #333;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .game-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #e65550;
+        }
+        #story {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Love Quest 💖</h1>
+        <p id="story">You find yourself standing in a beautiful rose garden. Someone special is waiting for you at the end of this path. What do you do?</p>
+        <button onclick="chooseOption('flirt')">Flirt your way closer 🌹</button>
+        <button onclick="chooseOption('confess')">Confess your feelings ❤️</button>
+        <button onclick="chooseOption('gift')">Give them a gift 🎁</button>
+    </div>
+
+    <script>
+        function chooseOption(choice) {
+            let story = document.getElementById('story');
+
+            if (choice === 'flirt') {
+                story.textContent = "Your charm works like magic! They smile and take a step closer. What next?";
+            } else if (choice === 'confess') {
+                story.textContent = "They blush and admit they feel the same. The atmosphere feels electric! What's your next move?";
+            } else if (choice === 'gift') {
+                story.textContent = "They love your thoughtful gesture and hold your hand gently. What do you do now?";
+            } else {
+                story.textContent = "Love is full of surprises. Try something else!";
+            }
+        }
+    </script>
+</body>
+</html>
